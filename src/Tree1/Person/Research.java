@@ -7,6 +7,8 @@ import java.util.List;
 
 
 public class Research {
+    private static PersonTree persons;
+
     /**
      * Класс имеющий методы исследования.
      * — Вывод всех кошатников,
@@ -44,10 +46,11 @@ public class Research {
             }
         }
     }
-    public static void getDogLovers(PersonTree persons) {
-        List<Person> tree = persons.getTree();
+    public static <E> void getDogLovers(PersonTree persons) {
+        Research.persons = persons;
+        List<E> tree = persons.getTree();
         System.out.println("List of Dog Lovers:");
-        for (Person person :
+        for (Object person :
                 tree) {
             if (person instanceof DogLover) {
                 System.out.println(person);

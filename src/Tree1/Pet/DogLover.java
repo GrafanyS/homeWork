@@ -2,7 +2,7 @@ package Tree1.Pet;
 
 import Tree1.Person.Person;
 
-public class DogLover extends Person implements CallPet {
+public class DogLover extends Person implements ICallPet {
     /**
      *  Класс, наследник от `Person`, описывающий людей любящих собак. Имплементируют интерфейс `CallPet`.
      *  Переопределяет метод `CallPet` в соответствии с поведением собачника.
@@ -14,11 +14,11 @@ public class DogLover extends Person implements CallPet {
     @Override
     public void callPet(Pet pet) {
         if(pet instanceof Cat){
-            System.out.printf("%s call %s with a whistle, but it don`t reacts\n",super.getName(),pet.getNickName());
+            System.out.printf("%s зовет %s  свистом, но он не реагирует\n",super.getName(),pet.getName());
         }
 
         if(pet instanceof Dog){
-            System.out.printf("%s call %s with a whistle, and it wags its tail and say:\n",super.getName(),pet.getNickName());
+            System.out.printf("%s зовет %s свистом, и он виляет хвостом и говорит:\n",super.getName(),pet.getName());
             pet.Respond();
         }
     }

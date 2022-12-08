@@ -1,32 +1,32 @@
 package Tree1.Pet;
 
-abstract public class Pet {
+abstract public class Pet implements IRespond {
     /**
      * Абстрактный класс, для определения животных имеющий общие для всех:
      *  Поля,
      *  Конструктор,
      *  Геттеры;
      */
-    private final String nickName;
+    private final String Name;
     private final int age;
 
-    public Pet(String nickName, int age) {
-        this.nickName = nickName;
+    public Pet(String Name, int age) {
+        this.Name = Name;
         this.age = age;
     }
 
-    public String getNickName() {
-        return nickName;
+    public String getName() {
+        return Name;
     }
 
     public int getAge() {
         return age;
     }
 
-    abstract public void Respond();
+//    abstract public void Respond();
 
     @Override
     public String toString() {
-        return ("Nickname: " + getNickName() + "; age:" + getAge());
+        return ("Имя: " + getName() + "; возраст:" + getAge());
     }
 }

@@ -1,6 +1,6 @@
 package Tree1.Pet;
 
-public interface CallPet {
+public interface ICallPet {
     /**
      *
      * Интерфейс имеющий метод позволяющий позвать питомца.

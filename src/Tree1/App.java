@@ -45,9 +45,9 @@ public class App {
         pets.add(new Dog("Graf",1));
 
         System.out.println("List of pets:\n" + pets + "\n");
-        System.out.println("-------------------\n");
+        System.out.println(",\"12\"-------------------\n");
         Research.getAllCall(peoples,pets);
-        System.out.println("-------------------\n");
+        System.out.println(",\"14\"-------------------\n");
         Research.getCats(pets);
         System.out.println("-------------------\n");
         Research.getDogs(pets);

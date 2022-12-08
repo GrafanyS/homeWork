@@ -29,6 +29,6 @@ public class Person extends Communications {
 
     @Override
     public String toString() {
-        return ("Name: "+getName()+"; age:"+getAge());
+        return ("Имя: "+getName()+"; возраст:"+getAge());
     }
 }

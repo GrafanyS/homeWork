@@ -12,7 +12,7 @@ public class Dog extends Pet {
 
     @Override
     public void Respond() {
-        System.out.println("woof-woof-woof");
+        System.out.println("гав-гав-гав");
     }
 
 }
