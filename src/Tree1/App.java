@@ -18,16 +18,16 @@ public class App {
      */
     public static void main(String[] args) {
         PersonTree<Person> peoples = new PersonTree<>();
-        peoples.add(new DogLover("Valetov Vasiliy Innokentievich", 82));
-        peoples.add(new CatLover("Voynash Tamara Vasilevna", 56));
-        peoples.add(new DogLover("Valetova Elena Petrovna", 79));
-        peoples.add(new CatLover("Valetov Andrey Vasilievich", 50));
+        peoples.add(new DogLover("Валетов Василий", 82));
+        peoples.add(new CatLover("Войнаш Томара", 56));
+        peoples.add(new DogLover("Валетова Елена", 79));
+        peoples.add(new CatLover("Валетов Андрей", 50));
 
         Tree tree = new Tree();
-        Person pa = new Person("Valetov Vasiliy Innokentievich",82);
-        Person ma = new Person("Valetova Elena Petrovna", 79);
-        Person so = new Person("Valetov Andrey  Vasilievich", 50);
-        Person dot = new Person("Voynash Tamara Vasilevna", 56);
+        Person pa = new Person("Валетов Василий",82);
+        Person ma = new Person("Валетова Елена", 79);
+        Person so = new Person("Валетов Андрей", 50);
+        Person dot = new Person("Войнаш Томара", 56);
 
         tree.addLink(pa,ma, Relations.HUSBAND, Relations.WIFE);
         tree.addLink(pa,so, Relations.FATHER, Relations.SON);
@@ -36,15 +36,15 @@ public class App {
         tree.addLink(ma,dot, Relations.MOTHER, Relations.DAUGHTER);
         tree.addLink(so,dot, Relations.BROTHER, Relations.SISTER);
 
-        System.out.println("List of persons:\n" + peoples + "\n");
+        System.out.println("Список лиц:\n" + peoples + "\n");
 
         PetTree<Pet> pets = new PetTree<>();
-        pets.add(new Cat("Nusha",9));
-        pets.add(new Cat("Marik",7));
-        pets.add(new Dog("Druzok",12));
-        pets.add(new Dog("Graf",1));
+        pets.add(new Cat("Нюша",9));
+        pets.add(new Cat("Марик",7));
+        pets.add(new Dog("Дружок",12));
+        pets.add(new Dog("Граф",1));
 
-        System.out.println("List of pets:\n" + pets + "\n");
+        System.out.println("Список питомцев:\n" + pets + "\n");
         System.out.println(",\"12\"-------------------\n");
         Research.getAllCall(peoples,pets);
         System.out.println(",\"14\"-------------------\n");
