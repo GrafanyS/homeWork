@@ -3,7 +3,7 @@ package Tree1.Pet;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PetTree<T> {
+public class PetTree<T>{
     /**
      * Класс хранящий список животных. Имеет сеттер и геттер.
      */
@@ -25,4 +25,5 @@ public class PetTree<T> {
         }
         return str.toString();
     }
+
 }

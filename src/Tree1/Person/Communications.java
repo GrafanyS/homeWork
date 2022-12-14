@@ -37,7 +37,7 @@ public class Communications {
 
     @Override
     public String toString() {
-        return String.format("%s  is %s for %s ", getPeople().getName(), getRelationType(),getRelationPeople().getName()
+        return String.format("%s  является %s для %s ", getPeople().getName(), getRelationType(),getRelationPeople().getName()
                         );
     }
 }

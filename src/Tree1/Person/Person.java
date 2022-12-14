@@ -1,6 +1,8 @@
 package Tree1.Person;
 
-public class Person extends Communications {
+import Tree1.Pet.IRespond;
+
+public class Person extends Communications implements IRespond {
     /**
      * Абстрактный класс для определения людей имеющий общие для всех:
      *     * Поля,
@@ -30,5 +32,10 @@ public class Person extends Communications {
     @Override
     public String toString() {
         return ("Имя: "+getName()+"; возраст:"+getAge());
+    }
+
+    @Override
+    public void Respond()  {
+        System.out.println("Зовет питомца");
     }
 }

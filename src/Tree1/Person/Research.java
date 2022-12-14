@@ -2,6 +2,7 @@ package Tree1.Person;
 
 import Tree1.Pet.*;
 
+
 import java.util.List;
 
 
@@ -46,10 +47,10 @@ public class Research {
             }
         }
     }
-    public static <E> void getDogLovers(PersonTree persons) {
+    public static  void getDogLovers(PersonTree persons) {
         Research.persons = persons;
-        List<E> tree = persons.getTree();
-        System.out.println("List of Dog Lovers:");
+        List tree = persons.getTree();
+        System.out.println("Список любителей собак:");
         for (Object person :
                 tree) {
             if (person instanceof DogLover) {
@@ -61,7 +62,7 @@ public class Research {
 
     public static void getCatLovers(PersonTree persons) {
         List<Person> tree = persons.getTree();
-        System.out.println("List of Cat Lovers:");
+        System.out.println("Список любителей кошек:");
         for (Person person :
                 tree) {
             if (person instanceof CatLover) {
@@ -73,7 +74,7 @@ public class Research {
 
     public static void getCats(PetTree pets) {
         List<Pet> tree = pets.getTree();
-        System.out.println("List of Cats:");
+        System.out.println("Список кошек:");
         for (Pet pet :
                 tree) {
             if (pet instanceof Cat) {
@@ -85,7 +86,7 @@ public class Research {
 
     public static void getDogs(PetTree pets) {
         List<Pet> tree = pets.getTree();
-        System.out.println("List of Dogs:");
+        System.out.println("Список собак:");
         for (Pet pet :
                 tree) {
             if (pet instanceof Dog) {

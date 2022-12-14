@@ -1,6 +1,6 @@
 package Tree1.Pet;
 
-abstract public class Pet implements IRespond {
+public abstract class Pet implements IRespond{
     /**
      * Абстрактный класс, для определения животных имеющий общие для всех:
      *  Поля,

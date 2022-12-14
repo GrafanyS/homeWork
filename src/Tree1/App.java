@@ -29,12 +29,12 @@ public class App {
         Person so = new Person("Валетов Андрей", 50);
         Person dot = new Person("Войнаш Томара", 56);
 
-        tree.addLink(pa,ma, Relations.HUSBAND, Relations.WIFE);
-        tree.addLink(pa,so, Relations.FATHER, Relations.SON);
-        tree.addLink(pa,dot, Relations.FATHER, Relations.DAUGHTER);
-        tree.addLink(ma,so, Relations.MOTHER, Relations.SON);
-        tree.addLink(ma,dot, Relations.MOTHER, Relations.DAUGHTER);
-        tree.addLink(so,dot, Relations.BROTHER, Relations.SISTER);
+        tree.addLink(pa,ma, Relations.МУЖ, Relations.ЖЕНА);
+        tree.addLink(pa,so, Relations.ОТЕЦ, Relations.СЫН);
+        tree.addLink(pa,dot, Relations.ОТЕЦ, Relations.ДОЧЬ);
+        tree.addLink(ma,so, Relations.МАМА, Relations.СЫН);
+        tree.addLink(ma,dot, Relations.МАМА, Relations.ДОЧЬ);
+        tree.addLink(so,dot, Relations.БРАТ, Relations.СЕСТРА);
 
         System.out.println("Список лиц:\n" + peoples + "\n");
 
@@ -47,9 +47,9 @@ public class App {
         System.out.println("Список питомцев:\n" + pets + "\n");
         System.out.println(",\"12\"-------------------\n");
         Research.getAllCall(peoples,pets);
-        System.out.println(",\"14\"-------------------\n");
+        System.out.println("Котики-------------------\n");
         Research.getCats(pets);
-        System.out.println("-------------------\n");
+        System.out.println("Собаки-------------------\n");
         Research.getDogs(pets);
         System.out.println("-------------------\n");
         Research.getCatLovers(peoples);
@@ -67,8 +67,9 @@ public class App {
         System.out.println("-------------------\n");
         Research.getResearch(so,tree);
         System.out.println("-------------------\n");
-        Research.getResearch(Relations.SISTER, tree);
+        Research.getResearch(Relations.СЕСТРА, tree);
         System.out.println("-------------------\n");
-        Research.getResearch(Relations.HUSBAND, pa, tree);
+        Research.getResearch(Relations.МУЖ, pa, tree);
+        
     }
 }
